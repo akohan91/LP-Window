@@ -1,0 +1,217 @@
+// Объявление переменных
+$all_col: 12;     // Кол-во колонок в сетке
+$pm: padding;      // Выбор типа отступа (margin or padding)
+$otstlr: 15px;    // Горизонтальный отступ
+$col: 12;         // Кол-во звнимаемых колонок
+$width-xsm:480px;
+$width-sm:768px;
+$width-md:1024px;
+$width-lg:1280px;
+
+.wrapper{
+  max-width: $width-lg;
+  margin: 0 auto;
+}
+
+@mixin row-flex(){
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Создает заданное кол-во колонок с отступами
+@mixin col($col: $col){
+  width: calc(100% / #{$all_col} * #{$col} - #{$otstlr} * 2);
+  margin: 0 $otstlr;   
+}
+
+@mixin col-xsm($col){
+  @media screen and (max-width: $width-xsm){
+    width: calc(100% / #{$all_col} * #{$col} - #{$otstlr} * 2);
+  }
+}
+
+@mixin col-sm($col){
+  @media screen and (max-width: $width-sm){
+    width: calc(100% / #{$all_col} * #{$col} - #{$otstlr} * 2);
+  }
+}
+
+@mixin col-md($col){
+  @media screen and (max-width: $width-md){
+    width: calc(100% / #{$all_col} * #{$col} - #{$otstlr} * 2);
+  }
+}
+@mixin col-lg($col){
+  @media screen and (max-width: $width-lg){
+    width: calc(100% / #{$all_col} * #{$col} - #{$otstlr} * 2);
+  }
+}
+
+
+
+// Задает отступы слева
+@mixin left($col: $col){
+  @if ($col == 0) {
+    margin-left: $otstlr;
+  }
+  @else {
+    margin-left: calc(100% / #{$all_col} * #{$col} + #{$otstlr});
+  }
+}
+
+@mixin left-xsm($col){
+  @media screen and (max-width: $width-xsm){
+    @if ($col == 0) {     
+      margin-left: $otstlr;   
+    }   
+    @else {     
+      margin-left: calc(100% / #{$all_col} * #{$col} + #{$otstlr});   
+    }
+  }
+}
+
+@mixin left-sm($col){
+  @media screen and (max-width: $width-sm){
+    @if ($col == 0) {     
+      margin-left: $otstlr;   
+    }   
+    @else {     
+      margin-left: calc(100% / #{$all_col} * #{$col} + #{$otstlr});   
+    }
+  }
+}
+
+@mixin left-md($col){
+  @media screen and (max-width: $width-md){
+    @if ($col == 0) {     
+      margin-left: $otstlr;   
+    }   
+    @else {     
+      margin-left: calc(100% / #{$all_col} * #{$col} + #{$otstlr});   
+    }
+  }
+}
+@mixin left-lg($col){
+  @media screen and (max-width: $width-lg){
+    @if ($col == 0) {     
+      margin-left: $otstlr;   
+    }   
+    @else {     
+      margin-left: calc(100% / #{$all_col} * #{$col} + #{$otstlr});   
+    }
+  }
+}
+
+// Устанавливает позицию флекс контейнера
+@mixin order($order){
+  order: $order;
+}
+
+@mixin order-xsm($order){
+  @media screen and (max-width: $width-xsm){
+    order: $order;
+  }
+}
+
+@mixin order-sm($order){
+  @media screen and (max-width: $width-sm){
+    order: $order;
+  }
+}
+
+@mixin order-md($order){
+  @media screen and (max-width: $width-md){
+    order: $order;
+  }
+}
+@mixin order-lg($order){
+  @media screen and (max-width: $width-lg){
+    order: $order;
+  }
+}
+
+// Устанавливает направление флкх элементов
+@mixin direction($direction){
+  flex-direction: $direction;
+}
+
+@mixin direction-xsm($direction){
+  @media screen and (max-width: $width-xsm){
+    flex-direction: $direction;
+  }
+}
+
+@mixin direction-sm($direction){
+  @media screen and (max-width: $width-sm){
+    flex-direction: $direction;
+  }
+}
+
+@mixin direction-md($direction){
+  @media screen and (max-width: $width-md){
+    flex-direction: $direction;
+  }
+}
+@mixin direction-lg($direction){
+  @media screen and (max-width: $width-lg){
+    flex-direction: $direction;
+  }
+}
+
+// Перенос блоков
+@mixin wrap($wrap){
+  flex-wrap: $wrap;
+}
+
+@mixin wrap-xsm($wrap){
+  @media screen and (max-width: $width-xsm){
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin wrap-sm($wrap){
+  @media screen and (max-width: $width-sm){
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin wrap-md($wrap){
+  @media screen and (max-width: $width-md){
+    flex-wrap: $wrap;
+  }
+}
+@mixin wrap-lg($wrap){
+  @media screen and (max-width: $width-lg){
+    flex-wrap: $wrap;
+  }
+}
+
+// // Выравнивание по центру горизонталь
+@mixin justcontent($poz){
+  justify-content: $poz;
+}
+
+@mixin justcontent-xsm($poz){
+  @media screen and (max-width: $width-xsm){
+    justify-content: $poz;
+  }
+}
+
+@mixin justcontent-sm($poz){
+  @media screen and (max-width: $width-sm){
+    justify-content: $poz;
+  }
+}
+
+@mixin justcontent-md($poz){
+  @media screen and (max-width: $width-md){
+    justify-content: $poz;
+  }
+}
+@mixin justcontent-lg($poz){
+  @media screen and (max-width: $width-lg){
+    justify-content: $poz;
+  }
+}
+
+

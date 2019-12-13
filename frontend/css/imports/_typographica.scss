@@ -1,0 +1,26 @@
+$grey: #666666;
+$orange: #FF5916;
+$greylight: #F5F5F5;
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    color: #000;
+    font-size: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+button, button:visited, button:focus, button:active, button:hover{
+    outline:0 none !important;
+}
+
+.white{
+    color: #fff;
+}
